@@ -1,0 +1,13 @@
+nssm install geradoruuil
+
+Na janela que abrir, preencha exatamente assim:
+
+Path: (O caminho do python.exe que você copiou no passo 2)
+
+Startup directory: D:\Projetos\api
+Arguments: -m uvicorn main:app --host 0.0.0.0 --port 8000
+(Certifique-se de que dentro do seu main.py a variável da API se chama app).
+Configure os Logs (Crucial para ver o erro real):
+Vá na aba I/O e coloque:
+Stdout: D:\Projetos\api\saida.log
+Stderr: D:\Projetos\api\erro.log
